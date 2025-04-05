@@ -27,6 +27,7 @@ form.addEventListener("submit", (event) => {
   try {
     todos.add(title.value, category.value);
     render(todos.getAll(), todos.getCount());
+    todos.save()
   } catch (error) {
     console.error(error);
   }

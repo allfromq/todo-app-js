@@ -1,15 +1,11 @@
  export default class Todos {
   constructor() {
-    this.todos = [
-      {
-        title: "Learn JavaScript",
-        category: "work",
-      },
-      {
-        title: "Meditate",
-        category: "personal",
-      },
-    ];
+    const savedTodos = JSON.parse(localStorage.getItem("todos")); 
+    this.todos = savedTodos
+  }
+
+  save(){
+    localStorage.setItem("todos", JSON.stringify(this.todos))
   }
 
   getAll(){
@@ -21,7 +17,8 @@
   }
 
   add(title, category){
-    return this.todos.push({title, category})
+     this.todos.push({title, category})
+     this.save()
   }
 
   getWork(){
