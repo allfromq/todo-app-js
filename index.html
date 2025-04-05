@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TO DO's</title>
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+  <!--navbar-->
+  <nav id="navbar">
+    <a href="" class="nav-brand">TO DO's</a>
+
+    <ul>
+      <li class="nav-item">
+        <a href="about.html">About Us</a>
+      </li>
+      <li>
+        <a href="register.html" class="nav-item btn btn-default">Register</a>
+      </li>
+    </ul>
+  </nav>
+
+  <div class="container" id="main">
+    <h1>Welcome to the TO DO's App</h1>
+    <p>
+      Manage your daily tasks and to do's here. It's simple to use but also free.   
+    </p>
+
+    <!-- adding a new to-do form-->
+    <form id="todo-form">
+      <label for="todo-title"><b>Create a new Todo:</label>
+      <input type="text" id="todo-title" placeholder="Enter your todo...">
+      <select id="todo-category">
+        <option value="work">Work</option>
+        <option value="personal">Personal</option>
+      </select>
+      <input type="submit" class="btn btn-outline" value="Add">
+    </form>
+    <hr class="separator"/>
+
+    <!--filtering-->
+    <div>
+      <label>
+        Filter:
+        <select id="todo-filter">
+          <option value="show all">Show All</option>
+          <option value="work">Work</option>
+          <option value="personal">Personal</option>
+        </select>
+      </label>
+      <h3>Todos <span id="todo-count"></span></h3>
+      <ul id="todo-list"></ul>
+    </div>
+  </div>
+  <footer id="footer-wrapper">
+    <a href="about.html" target="_blank">About Us</a>
+    <a href="contact.hmtl" target="_blank">Contact Us</a>
+  </footer>
+
+
+</body>
+</html>
