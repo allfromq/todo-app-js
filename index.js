@@ -1,17 +1,17 @@
 import Todos from "./todos.js";
 
-const form = document.getElementById("todo-form");
+const form = document.querySelector("#todo-form");
 const title = document.querySelector("#todo-title");
 const category = document.querySelector("#todo-category");
 const list = document.querySelector("#todo-list");
-const filter = document.getElementById("todo-filter");
-const count = document.getElementById("todo-count");
+const filter = document.querySelector("#todo-filter");
+const count = document.querySelector("#todo-count");
 
 const render = (items, itemsCount) => {
   count.textContent = `(${itemsCount})`;
   list.innerHTML = items
     .map((todo) => `<li>${todo.title} [${todo.category}]</li>`)
-    .join(" ");
+    .join("");
 };
 
 const todos = new Todos();
@@ -25,7 +25,7 @@ try {
 form.addEventListener("submit", (event) => {
   event.preventDefault();
   try {
-    todos.add(title.value, category.vaule);
+    todos.add(title.value, category.value);
     render(todos.getAll(), todos.getCount());
   } catch (error) {
     console.error(error);
