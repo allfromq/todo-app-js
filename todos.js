@@ -37,4 +37,14 @@
     return this.todos.filter(todo => todo.category === "personal").length
   }
 
+  delete(index){
+    this.todos.splice(index, 1)
+    this.save()
+  }
+
+  update(index,title, category){
+    this.todos[index] = {title, category}
+    this.save()
+  }
+
  }
