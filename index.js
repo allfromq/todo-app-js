@@ -22,6 +22,8 @@ const render = (items, itemsCount) => {
       <button class="edit-btn" data-index="${index}">✏️</button> <button class="delete-btn" data-index="${index}">❌</button></li>`
     )
     .join("");
+
+
 //delete logic 
     document.querySelectorAll(".delete-btn").forEach((btn)=>{
       btn.addEventListener("click", () => {
@@ -29,6 +31,8 @@ const render = (items, itemsCount) => {
         render(todos.getAll(), todos.getCount());
       })
     })
+
+
 // edit botton logic
     document.querySelectorAll(".edit-btn").forEach((btn)=>{
       btn.addEventListener("click", ()=>{
@@ -53,20 +57,26 @@ try {
   console.error(error);
 }
 
+
+//form
+
 form.addEventListener("submit", (event) => {
   event.preventDefault();
   
   if(editIndex !== null) return;
   
   try {
-    todos.add(title.value, category.value);
+    todos.add(title.value.trim(), category.value.trim());
     render(todos.getAll(), todos.getCount());
     todos.save()
   } catch (error) {
     console.error(error);
   }
   title.value = "";
+  category.value = "";
 });
+
+//filter
 
 filter.addEventListener("change", () => {
   try {
@@ -86,7 +96,8 @@ filter.addEventListener("change", () => {
 });
 
 //save edit logic
-saveEdit.addEventListener("click", () => {
+saveEdit.addEventListener("click", (e) => {
+  e.preventDefault()
   if (editIndex !== null){
     const updatedTitle = editTitle.value.trim();
     const updatedCategory = editCategory.value.trim();
