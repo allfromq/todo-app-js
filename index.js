@@ -18,8 +18,10 @@ const render = (items, itemsCount) => {
   list.innerHTML = items
     .map(
       (todo, index) =>
-        `<li>${todo.title} [${todo.category}] 
-      <button class="edit-btn" data-index="${index}">✏️</button> <button class="delete-btn" data-index="${index}">❌</button></li>`
+        `<li class="todo-item ${index % 2 === 0 ? "even" : "odd"}">${todo.title} [${todo.category}] <div class="btn-group">
+          <button class=" btn edit-btn" data-index="${index}">✏️</button> 
+          <button class="btn delete-btn" data-index="${index}">❌</button></li>
+          </div>`
     )
     .join("");
 
