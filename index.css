@@ -25,6 +25,8 @@ body {
   margin: 0;
 }
 
+
+
 h1 {
   margin: 50px 0 30px 0;
   font-weight: 400;
@@ -40,7 +42,9 @@ a {
   line-height: 1.4;
   padding: 0.25em;
 }
-
+.img-logo {
+  width: 100px;
+}
 .btn {
   border-radius: 3px;
   cursor: pointer;
@@ -131,6 +135,8 @@ button.btn {
 
 .edit-box{
   background-color: var(--accent-5);
+  margin-top: 20px;
+  padding: 20px;
 }
 
 #navbar {

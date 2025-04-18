@@ -11,7 +11,8 @@
 
   <!--navbar-->
   <nav id="navbar">
-    <a href="" class="nav-brand">TO DO's</a>
+    <img class="img-logo nav-brand" src="https://cdn.pixabay.com/photo/2020/01/21/18/39/todo-4783676_1280.png" alt="">
+    <!-- <a href="" class="nav-brand">TO DO's</a> -->
 
     <ul>
       <li class="nav-item">
@@ -24,7 +25,7 @@
   </nav>
 
   <div class="container" id="main">
-    <h1>Welcome to the TO DO's App</h1>
+    <h1>ToDo - Track Your Todos!</h1>
     <p>
       Manage your daily tasks and to do's here. It's simple to use but also free.   
     </p>
@@ -53,9 +54,13 @@
       </label>
 
       <div class="edit-box" id="edit-box" style="display: none;">
+        <label><b> Edit note:</label>
       <input id="edit-title" placeholder="Edit your todo">
-      <input id="edit-category" placeholder="Change category here">
-      <button class="btn" id="save-edit">Save</button>
+      <select id="edit-category">
+        <option value="work">Work</option>
+        <option value="personal">Personal</option>
+      </select>
+      <button class="btn btn-outline" id="save-edit">Save</button>
     </div>
 
       <h3>Todos <span id="todo-count" class="todo-list"></span></h3>
