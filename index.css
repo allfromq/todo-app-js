@@ -292,6 +292,13 @@ select {
     padding-left: 0;
 }
 
+.no-todos {
+  text-align: center;
+  font-style: italic;
+  color: var(--accent-1);
+  padding: 1rem;
+}
+
 .separator {
     margin-bottom: 20px;
 }

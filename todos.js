@@ -1,7 +1,7 @@
  export default class Todos {
   constructor() {
     const savedTodos = JSON.parse(localStorage.getItem("todos")); 
-    this.todos = savedTodos
+    this.todos = savedTodos || []
   }
 
   save(){

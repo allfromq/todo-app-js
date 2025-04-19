@@ -15,6 +15,12 @@ let editIndex = null
 
 const render = (items, itemsCount) => {
   count.textContent = `(${itemsCount})`;
+
+  if (list.length === 0){
+    list.innerHTML = `<li class="mo-todos">No todos at the moment. Add notes in the form above.</li>`
+    return;
+  }
+
   list.innerHTML = items
     .map(
       (todo, index) =>
