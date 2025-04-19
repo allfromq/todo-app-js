@@ -121,11 +121,11 @@ button.btn {
   margin-right: 10px;
 }
 .todo-item.even {
-  background-color: var(--primary-4);
+  background-color: var(--neutral-5);
 }
 
 .todo-item.odd {
-  background-color: var(--primary-3);
+  background-color: var(--neutral-4);
 }
 
 .group-btn {
