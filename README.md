@@ -1,4 +1,4 @@
-#Todo App with Vanilla JS
+# Todo App with Vanilla JS
 
 ### About This Project
 LINK: https://todo-app-js-beige.vercel.app/
